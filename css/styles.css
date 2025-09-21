@@ -1,0 +1,204 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Contenedor general */
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  /* HEADER */
+  .header {
+    background: blueviolet;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  #name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  #role {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: white;
+    text-align: left;
+  }
+  
+  /* ABOUT + CONTACT */
+  .main {
+    display: flex;
+    width: 100%;
+    height: 440px;
+  }
+  
+  .about, .contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .about { background: red; color: white; }
+  .contact { background: pink; color: black; }
+  
+  /* DASHBOARD (Acordeón) */
+  #dashboard {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Botón acordeón */
+  .accordion-btn {
+    background-color: #6a0dad;
+    color: white;
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .accordion-btn:hover {
+    background-color: #7b1fc5;
+  }
+  
+  /* Contenido del acordeón */
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background-color: #f4f4f9;
+    border-left: 2px solid #6a0dad;
+    border-right: 2px solid #6a0dad;
+    border-bottom: 2px solid #6a0dad;
+    flex-direction: column;
+    display: flex;
+    padding: 0 20px;
+  }
+  
+  /* Cuando el acordeón está activo */
+  .accordion-content.active {
+    max-height: 1000px;
+    padding: 10px 20px;
+  }
+  
+  /* Bloque de experiencia */
+  .job {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .job-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    object-fit: contain;
+  }
+  
+  .job-info h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .job-info p {
+    margin: 2px 0 0 0;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  /* CVESP y CVENG */
+  .cvesp, .cveng {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .cvesp { background: red; color: white; }
+  .cveng { background: red; color: white; }
+  
+  /* FOOTER */
+  .footer {
+    width: 100%;
+    height: 480px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+  
+  /* --- RESPONSIVE --- */
+  @media (max-width: 1024px) {
+    .header { height: 120px; font-size: 1.8rem; }
+    .main { flex-direction: column; height: auto; }
+    .about, .contact { height: 220px; font-size: 1.2rem; }
+    .cvesp, .cveng { height: 200px; font-size: 1.2rem; }
+    .footer { height: 360px; font-size: 1.5rem; }
+    #name { font-size: 2rem; }
+    #role { font-size: 1.3rem; }
+  }
+  
+  @media (max-width: 768px) {
+    .header { height: 100px; font-size: 1.5rem; }
+    .about, .contact { height: 180px; font-size: 1rem; }
+    .cvesp, .cveng { height: 150px; font-size: 1rem; }
+    .footer { height: 300px; font-size: 1.2rem; }
+    #name { font-size: 1.7rem; }
+    #role { font-size: 1.1rem; }
+  }
+  
+  @media (max-width: 480px) {
+    .header { height: 80px; font-size: 1.2rem; }
+    .about, .contact { height: 140px; font-size: 0.9rem; }
+    .cvesp, .cveng { height: 120px; font-size: 0.9rem; }
+    .footer { height: 240px; font-size: 1rem; }
+    #name { font-size: 1.4rem; }
+    #role { font-size: 0.9rem; }
+  }
+  
