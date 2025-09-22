@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Muñoz Rodríguez - Tech Specialist</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Banner Sticky -->
+  <div class="sticky-banner" id="stickyBanner">
+    <div class="banner-name-container">
+      <div class="banner-firstname">DAVID</div>
+      <div class="banner-fullname">MUÑOZ RODRÍGUEZ</div>
+    </div>
+    
+    <div class="banner-slogan">#makingthingshappen</div>
+  </div>
+
+  <!-- Botones Flotantes Mejorados -->
+  <div class="floating-buttons" id="floatingButtons">
+    <button class="floating-btn floating-btn-main" id="mainFloatingBtn">
+      <i class="fas fa-plus"></i>
+    </button>
+    
+    <!-- Nuevos botones para CV -->
+    <button class="floating-btn floating-btn-secondary" id="cvEspFloatingBtn" title="Descargar CV Español">
+      <i class="fas fa-file-download"></i>
+      <span class="floating-btn-tooltip">Descargar CV (ESP)</span>
+    </button>
+    
+    <button class="floating-btn floating-btn-secondary" id="cvEngFloatingBtn" title="Download CV English">
+      <i class="fas fa-file-pdf"></i>
+      <span class="floating-btn-tooltip">Download CV (ENG)</span>
+    </button>
+    
+    <!-- Botones existentes -->
+    <button class="floating-btn floating-btn-secondary" id="contactFloatingBtn" title="Añadir a contactos">
+      <i class="fas fa-address-book"></i>
+      <span class="floating-btn-tooltip">Añadir a contactos</span>
+    </button>
+    
+    <button class="floating-btn floating-btn-secondary" id="qrFloatingBtn" title="Código QR">
+      <i class="fas fa-qrcode"></i>
+      <span class="floating-btn-tooltip">Código QR</span>
+    </button>
+    
+    <button class="floating-btn floating-btn-secondary" id="shareFloatingBtn" title="Compartir">
+      <i class="fas fa-share-alt"></i>
+      <span class="floating-btn-tooltip">Compartir</span>
+    </button>
+  </div>
+
+  <!-- Modal para QR -->
+  <div class="qr-modal" id="qrModal">
+    <div class="qr-modal-content">
+      <button class="qr-close" id="qrClose">
+        <i class="fas fa-times"></i>
+      </button>
+      <h3 class="qr-title">David Muñoz - Tarjeta Digital</h3>
+      <p>Tech Specialist<br>#MakingThingsHappen</p>
+      <div class="qr-code-container" id="qrCode"></div>
+      <div class="qr-options">
+        <button class="qr-option-btn" id="saveQrBtn">
+          <i class="fas fa-download"></i>
+          <span>Guardar QR</span>
+        </button>
+        <button class="qr-option-btn" id="shareQrBtn">
+          <i class="fas fa-share"></i>
+          <span>Compartir QR</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para Compartir -->
+  <div class="share-modal" id="shareModal">
+    <div class="share-modal-content">
+      <button class="share-close" id="shareClose">
+        <i class="fas fa-times"></i>
+      </button>
+      <h3 class="share-title">Compartir Contacto</h3>
+      <p>Elige cómo quieres compartir mi información de contacto</p>
+      <div class="share-options">
+        <button class="share-option-btn" id="shareWhatsApp">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp</span>
+        </button>
+        <button class="share-option-btn" id="shareTelegram">
+          <i class="fab fa-telegram"></i>
+          <span>Telegram</span>
+        </button>
+        <button class="share-option-btn" id="shareEmail">
+          <i class="fas fa-envelope"></i>
+          <span>Email</span>
+        </button>
+        <button class="share-option-btn" id="shareLinkedIn">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </button>
+        <button class="share-option-btn" id="shareTwitter">
+          <i class="fab fa-twitter"></i>
+          <span>Twitter</span>
+        </button>
+        <button class="share-option-btn" id="copyLink">
+          <i class="fas fa-link"></i>
+          <span>Copiar enlace</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Banner de Bienvenida -->
+    <div class="welcome-banner">
+      <div class="welcome-name">DAVID</div>
+      <div class="welcome-surname">MUÑOZ RODRÍGUEZ</div>
+      <div class="welcome-slogan">#makingthingshappen</div>
+      <p class="welcome-text">Tech Specialist con experiencia en IT, atención al cliente, medios de comunicación y diseño gráfico. Apasionado por la innovación y el emprendimiento.</p>
+      <button class="welcome-btn">
+        <i class="fas fa-rocket"></i> Descubrir mi perfil
+      </button>
+    </div>
+
+    <!-- ABOUT + CONTACT -->
+    <div class="main">
+      <div class="about">
+        <h1 id="letter"><i class="fas fa-user-circle"></i> Carta de presentación</h1>
+        <p> <strong>Mi nombre es David y provengo de Gijón, Asturias, España</strong>. Desde joven, siempre he sido un firme creyente en el emprendimiento. Considero que el proceso de prueba y error es fundamental para descubrir nuestras habilidades y alcanzar nuestros objetivos.</p>
+        <br>
+        <p> <strong>Tengo experiencia práctica en diversos campos, incluyendo IT, atención al cliente, medios de comunicación, ventas y diseño gráfico.</strong> Esta web es la evolución de mi presentación. ¡Afayaivos!.</p>
+        <br>    
+        <p> <strong>Me motiva mantenirme activo, aprender de manera constante y desafiarme a crecer y adquirir nuevos conocimientos. Siempre estoy buscando avanzar y fomentar la innovación.</strong></p>
+      </div>
+
+      <div class="contact">
+        <h3><i class="fas fa-address-card"></i> Contacto</h3>
+        <div class="contact-info">
+          <p><i class="fas fa-map-marker-alt"></i> Gijón, Asturias (ES)</p>
+          <p><i class="fas fa-phone"></i> +34 638 035 001</p>
+          <p><i class="fas fa-envelope"></i> david@dmunoz.es</p>
+        </div>
+        <div class="contact-buttons">
+          <button class="contact-btn btn-call"><i class="fas fa-phone"></i> Llamar</button>
+          <button class="contact-btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+          <button class="contact-btn btn-email"><i class="fas fa-envelope"></i> Email</button>
+          <button class="contact-btn btn-telegram"><i class="fab fa-telegram"></i> Telegram</button>
+          <button class="contact-btn btn-linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- DASHBOARD (Tarjetas de categorías) -->
+    <div id="dashboard">
+        <h1><i class="fas fa-chart-line"></i> Dashboard Profesional</h1>
+        <p>Bienvenido a mi CV. Aquí tienes un resumen de mi experiencia profesional. ¡Adelante, explóralo!</p>
+
+        <div class="categories-grid">
+            <!-- Atención al cliente -->
+            <div class="category-card" data-category="customer-service">
+                <div class="category-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="category-title">Atención al cliente</h3>
+                <span class="category-count">5 experiencias</span>
+            </div>
+
+            <!-- Medios de comunicación -->
+            <div class="category-card" data-category="media">
+                <div class="category-icon">
+                    <i class="fas fa-broadcast-tower"></i>
+                </div>
+                <h3 class="category-title">Media</h3>
+                <span class="category-count">2 experiencias</span>
+            </div>
+
+            <!-- Ventas -->
+            <div class="category-card" data-category="sales">
+                <div class="category-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="category-title">Ventas</h3>
+                <span class="category-count">5 experiencias</span>
+            </div>
+
+            <!-- Informática y Telecomunicaciones -->
+            <div class="category-card" data-category="it">
+                <div class="category-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="category-title">IT</h3>
+                <span class="category-count">3 experiencias</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NUEVA SECCIÓN: Formación -->
+    <div class="education-section">
+        <h2><i class="fas fa-graduation-cap"></i> Formación</h2>
+        
+        <div class="education-item">
+            <div class="education-icon">
+                <i class="fas fa-server"></i>
+            </div>
+            <div class="education-content">
+                <h3 class="education-title">CFGM Sistemas Microinformáticos y Redes</h3>
+                <p class="education-institution">IES Número 1 de Gijón</p>
+                <span class="education-duration">2014-2016</span>
+                <p class="education-description">Formación en instalación, configuración y mantenimiento de sistemas microinformáticos, redes locales y software aplicado. Conocimientos en hardware, sistemas operativos y redes de datos.</p>
+            </div>
+        </div>
+        
+        <div class="education-item">
+            <div class="education-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="education-content">
+                <h3 class="education-title">Curso de Marketing Digital (Básico)</h3>
+                <p class="education-institution">IAB Spain & Google Activate</p>
+                <span class="education-duration">2017</span>
+                <p class="education-description">Fundamentos de marketing digital, SEO, SEM, redes sociales, analítica web y publicidad online. Certificación en estrategias digitales básicas para la promoción de productos y servicios.</p>
+            </div>
+        </div>
+        
+        <div class="education-item">
+            <div class="education-icon">
+                <i class="fas fa-language"></i>
+            </div>
+            <div class="education-content">
+                <h3 class="education-title">Cambridge English: B1 Preliminary (PET)</h3>
+                <p class="education-institution">Cambridge Language Assessment</p>
+                <span class="education-duration">2017-2018</span>
+                <p class="education-description">Certificación oficial de nivel de inglés B1 según el Marco Común Europeo de Referencia para las lenguas. Habilidades en comprensión lectora, auditiva, expresión oral y escrita.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NUEVA SECCIÓN: Idiomas -->
+    <div class="languages-section">
+        <h2><i class="fas fa-language"></i> Idiomas</h2>
+        
+        <div class="accordion">
+            <button class="accordion-btn">Idiomas <i class="fas fa-language"></i></button>
+            <div class="accordion-content">
+                <div class="language-item">
+                    <span class="language-name">Español</span>
+                    <span class="language-level">Nativo</span>
+                </div>
+                <div class="language-item">
+                    <span class="language-name">Inglés</span>
+                    <span class="language-level">B1 (PET)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NUEVA SECCIÓN: Skills -->
+    <div class="skills-section">
+        <h2><i class="fas fa-tools"></i> Skills</h2>
+        
+        <div class="skills-grid">
+            <div class="skill-item">Clientes</div>
+            <div class="skill-item">Ventas</div>
+            <div class="skill-item">Marketing</div>
+            <div class="skill-item">Editorial</div>
+            <div class="skill-item">Blogs</div>
+            <div class="skill-item">Teamwork</div>
+            <div class="skill-item">Smartphones</div>
+            <div class="skill-item">Android</div>
+            <div class="skill-item">iOS</div>
+            <div class="skill-item">Windows</div>
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">SAP</div>
+            <div class="skill-item">Blogs</div>
+            <div class="skill-item">Google IT</div>
+            <div class="skill-item">Microsoft 365</div>
+            <div class="skill-item">Linux</div>
+            <div class="skill-item">Azure</div>
+        </div>
+    </div>
+
+    <!-- Modal para experiencias -->
+<div id="experienceModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <h1 id="ending">¡Gracias por tu tiempo!</h1>
+      <p>Si estás interesado en mi perfil o necesitas más información, no dudes en contactarme. Estoy abierto a nuevas oportunidades y proyectos desafiantes.</p>
+      
+      <div class="social-links">
+        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Incluir biblioteca QRCode.js -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <!-- Incluir nuestro archivo JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
